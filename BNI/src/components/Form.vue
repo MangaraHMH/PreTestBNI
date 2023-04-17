@@ -64,16 +64,18 @@ export default {
             id="form-first-name"
             placeholder="Enter first name here"
             autocomplete="off"
+            required
             v-model="input.firstName"
           />
         </div>
         <div className="mb-3">
           <input
-            type="text"
+            type="password"
             className="form-control"
             id="form-last-name"
             placeholder="Enter last name here"
             autocomplete="off"
+            required
             v-model="input.lastName"
           />
         </div>
@@ -84,6 +86,7 @@ export default {
             id="form-username"
             placeholder="Enter username here"
             autocomplete="off"
+            required
             v-model="input.username"
           />
         </div>
@@ -94,6 +97,7 @@ export default {
             id="form-email"
             placeholder="Enter email here"
             autocomplete="off"
+            required
             v-model="input.email"
           />
         </div>
@@ -108,7 +112,7 @@ export default {
           />
         </div>
         <div>
-          <button className="btn btn-outline-primary" type="submit">Submit</button>
+          <button className="btn btn-outline-primary" id="submit" type="submit">Submit</button>
         </div>
       </form>
     </div>
