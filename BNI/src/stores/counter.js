@@ -47,6 +47,7 @@ export const useCounterStore = defineStore('counter', {
           headers: { 'Content-Type': 'application/json' },
           data: { input }
         })
+        this.router.push('/')
         Toastify({
           text: 'Succes Add User',
           style: {
@@ -54,7 +55,6 @@ export const useCounterStore = defineStore('counter', {
           },
           duration: 3000
         }).showToast()
-        this.router.push('/')
       } catch (err) {
         Toastify({
           text: `${err.response.data.message}`,
